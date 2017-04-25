@@ -35,7 +35,7 @@ public class DBTelefon extends SQLiteOpenHelper {
     // Contacts Table Columns names
     private static final String KEY_ID = "id";
     private static final String KEY_IMIE = "imie";
-    private static final String KEY_TELEFON = "nazwisko";
+    private static final String KEY_TELEFON = "numer";
     public static int klasyk;
     public static int powter;
 

@@ -17,6 +17,7 @@ public class bazy extends AppCompatActivity {
     Button read, add;
     EditText imie, numer;
     TextView text;
+    private static DBTelefon db;
 
 
 
@@ -29,11 +30,12 @@ public class bazy extends AppCompatActivity {
         imie = (EditText)findViewById(R.id.editText2);
         numer = (EditText)findViewById(R.id.editText3);
         text = (TextView)findViewById(R.id.textView2);
+        db = new DBTelefon(this);
 
         read.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                text.setText(DBTelefon);
+                text.setText("");
             }
         });
 
