@@ -10,6 +10,7 @@ import android.widget.TextView;
 
 import org.w3c.dom.Text;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -22,7 +23,7 @@ public class bazy extends AppCompatActivity {
     TextView text;
     private static DBTelefon db;
 
-
+    public static ArrayList list = new ArrayList();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,6 +43,7 @@ public class bazy extends AppCompatActivity {
         read.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
             }
         });
 
@@ -53,6 +55,9 @@ public class bazy extends AppCompatActivity {
                 String numero = numer.getText().toString();
 
                 db.addTelefon(new CTelefon(nazwa, numero));
+                list.add(nazwa);
+                list.add(numero);
+                Log.d("LISTaa", String.valueOf(list));
 
                 Log.d("Czytaj", "Zczytaj wszystkie alarmy");
                 List<CTelefon> zosia = db.getAllTelephones();
