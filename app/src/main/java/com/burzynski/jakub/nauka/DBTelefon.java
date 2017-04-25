@@ -47,7 +47,7 @@ public class DBTelefon extends SQLiteOpenHelper {
     @Override
     public void onCreate(SQLiteDatabase db) {
         String CREATE_CONTACTS_TABLE = "CREATE TABLE " + TABLE_TELEFON + "("
-                + KEY_ID + " INTEGER PRIMARY KEY," + KEY_IMIE + " TEXT, " + KEY_TELEFON + "TEXT, " + ")";
+                + KEY_ID + " INTEGER PRIMARY KEY, " + KEY_IMIE + " TEXT, " + KEY_TELEFON + " TEXT " + ")";
         db.execSQL(CREATE_CONTACTS_TABLE);
 
     }

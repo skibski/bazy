@@ -24,6 +24,10 @@ public class CTelefon {
         this._telefon = telefon;
     }
 
+    public CTelefon(String name){
+        this._name = name;
+    }
+
    public int get_id(){
         return this._id;
     }
@@ -36,15 +40,16 @@ public class CTelefon {
         return this._name;
     }
 
-    public String setName(String string){
-        return this._name;
-    }
-
-    public String setTelefon(String string){
-        return this._telefon;
+    public void setName(String name)
+    {
+        this._name = name;
     }
 
     public String getTelefon(){
         return this._telefon;
+    }
+
+    public void setTelefon(String telefon){
+        this._telefon = telefon;
     }
 }
