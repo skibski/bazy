@@ -11,7 +11,6 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import java.util.ArrayList;
-
 /**
  * Created by student on 25.04.2017.
  */
@@ -40,7 +39,7 @@ public class RowAdapter extends ArrayAdapter<TelefonRow> {
             row = inflater.inflate(layoutResourceId, parent, false);
 
             holder = new RowBeanHolder();
-            holder.imgIcon = (ImageView)row.findViewById(R.id.imageView9);
+            holder.txtTitle = (TextView)row.findViewById(R.id.textView6);
             holder.txtTitle = (TextView)row.findViewById(R.id.textView35);
 
             row.setTag(holder);
@@ -51,8 +50,8 @@ public class RowAdapter extends ArrayAdapter<TelefonRow> {
         }
 
         TelefonRow object = data[position];
-        holder.txtTitle.setText(object.title);
-        holder.imgIcon.setImageResource(object.icon);
+        holder.txtTitle.setText(object.imie);
+        holder.txtTitle.setText(object.telefon);
 
         return row;
     }
