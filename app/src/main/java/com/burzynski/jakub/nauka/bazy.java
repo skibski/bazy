@@ -71,10 +71,18 @@ public class bazy extends AppCompatActivity {
 
         });
 
+        read.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                text.setText(String.valueOf(list));
+            }
+        });
+
         clear.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 db.deleteAll();
+                text.setText("");
             }
         });
     }
